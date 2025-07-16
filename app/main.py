@@ -5,6 +5,7 @@ import requests
 CITY = "Kyiv"  # Можеш вказати будь-яке місто
 URL = "http://api.weatherapi.com/v1/current.json"  # API для отримання погоди
 
+
 def get_weather() -> None:
     api_key = os.getenv("API_KEY")
 
@@ -35,6 +36,7 @@ def get_weather() -> None:
         print(f"HTTP помилка: {r_e}")
     except Exception as e:
         print(f"Інша помилка: {e}")
+
 
 if __name__ == "__main__":
     get_weather()
